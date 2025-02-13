@@ -7,51 +7,47 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# GitHub Pages
+# Shipwrecked Passengers' Topic Generator
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+_The place to be to add, delete, or modify topics!_
 
 </header>
 
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
 
-## Finish
+## To Modify an Existing List of Topics
 
-_Congratulations friend, you've completed this course!_
+_When it's time to mix it up!_
 
-<img src=https://octodex.github.com/images/constructocat2.jpg alt=celebrate width=300 align=right>
+### Create a new branch in GitHub Pages
 
-Your blog is now live and has been deployed!
+- Click the plus sign on the left column
+- Name your branch anything you like, as long as there are no spaces in the name (I suggest, 'new-topics')
+- Make any changes you like to the topic list(s)
 
-Here's a recap of all the tasks you've accomplished in your repository:
 
-- You enabled GitHub Pages.
-- You selected a theme using the config file.
-- You learned about proper directory format and file naming conventions in Jekyll.
-- You created your first blog post with Jekyll!
+### To Modify an Existing List of Topics
 
-### What's next?
+_in `topics`, open the `.js` file corresponding to the list you'd like to update._
 
-- Keep working on your GitHub Pages site... we love seeing what you come up with!
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
+
+- Add or edit any topic you like, ensuring there's a comma after each topic
+- Delete any topic you like, or just _comment it out_ by adding `//` to the beginning of that line if you might use it later
+- Save and publish your changes
+
+
+### To Save and Publish Changes
+
+- Save your changes to the `.js` file
+- Commit your changes within GitHub
+- Open a Pull Request (PR) from your branch into the `main` branch
+- Review the changes shown in the PR to double check your work
+- (optional) Have someone else review the PR
+- Merge your PR into the `main` branch and delete the `new-topics` branch to create a new one next time.
 
 <footer>
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
+Get help: [Reach out to Holls](itsgr82bfree@hotmail.com), Marilyn, or any of the Shipwrecked Passengers commitment-holders for assistance.
+_Contacts accurate as of 2/12/2025_
 </footer>
