@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+:root {
+  --primaryDark: #164580;
+  --primaryMidRGB: 104, 149, 205;
+  --primaryMid: #6895CD; // was #3977c3;
+  --primaryLight: #EFF4FA;
+  --lightest: #e1e1e1;
+  --darkest: #101B21;
+
+  --mwEdgeSpacing: clamp(24px, 3vw, 2rem);
+  --minWidth: 16rem;
+
+  --anim-duration: 5s;
+  --anim-speed: 0.65s;
+  --shine-degree: 250deg;
+  --shine-color: rgba(255, 255, 255, 0.3);
+  --shine-effect: linear-gradient(
+    var(--shine-degree),
+    transparent, transparent, transparent, 
+    var(--shine-color), transparent, transparent, 
+    transparent, transparent, transparent);
+  --shine-transition: all var(--anim-speed) ease-in-out;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primaryDark);
+    font-size: 16px;
+}
+
+.body-class {
+    color: var(--primaryMid);
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    padding-bottom: 17rem;
+}
+
+.container {
+    margin: 0 var(--mwEdgeSpacing);
+    text-align: center;
+    color: var(--primaryMid);
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    padding: var(--mwEdgeSpacing);
+    min-width: var(--minWidth);
+    @media only screen and (min-width: 500px) {
+        margin: 0 auto;
+    }
+    @media only screen and (min-width: 875px) {
+        max-width: clamp(20rem, 70%, 55rem);
+    }
+}
+  
+.message {
+    color: var(--lightest);
+    font-size: clamp(1.5rem, 8vw, 3.5rem);
+    line-height: clamp(1.25rem, 13vw, 4.75rem);
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    background: var(--primaryMid);
+    border: 4px solid var(--darkest);
+    border-radius: calc(clamp(2rem, 2vw, 3rem) * 2);
+    color: var(--darkest);
+    cursor: pointer;
+    font-size: clamp(2rem, 2vw, 3rem);
+    margin: clamp(2rem, 2vw, 3rem) 0;
+/*    padding: clamp(2rem, 2vw, 3rem) clamp(4rem, 4vw, 3rem);*/
+    width: var(--minWidth);
+    height: calc(clamp(2rem, 2vw, 3rem)*3);
+}
+
+.button:before {
+    left: 0%;
+    transition: var(--shine-transition);
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+}
+.button:hover:before {
+  left: 100%;
+}
+
+.button:after {
+    left: 100%;
+    transition: var(--shine-transition);
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+}
+.button:hover:after {
+  left: -100%;
+}
+
+
+.footer-wrap__relative.expanded {
+    bottom: 0;
+}
+.footer-wrap__relative.expanded .button__toggle-icon {
+    transform: scale(0.35) rotate(90deg);
+}
+
+
+.footer-wrap__relative {
+    background: rgba(var(--primaryMidRGB), 0.3);
+    display: flex;
+    position: relative;
+    width: 100%;
+    bottom: -70px;
+    position: relative;
+    transition: all 250ms ease-in-out;
+}
+
+.radio-wrap {
+    min-width: min-content;
+    width: 100%;
+}
+
+.radio-form {
+    align-items: flex-start;
+    color: var(--lightest);
+    display: flex;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin: clamp(2rem, 2vw, 3rem) auto;
+    width: max-content;
+    max-width: 100%;
+    @media only screen and (min-width: 875px) {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: clamp(2rem, 6vw, 5rem);
+        align-items: center;
+    }
+}
+
+.radio-wrap__span {
+    white-space: nowrap;
+}
+
+.footer-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button__toggle {
+    background: var(--primaryMid);
+    border: 1.5px solid var(--darkest);
+    border-radius: 100%;
+    box-shadow: -0.2rem 0.2rem 0 0 rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: -1.25rem;
+    height: 2rem;
+    width: 2rem;
+    z-index: 1;
+}
+.button__toggle-icon {
+    transform: scale(0.35) rotate(270deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button__toggle-icon path {
+    fill: var(--primaryDark);
+}
+
+.footer {
+    background: var(--primaryLight);
+    font-size: 0.75rem;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+.footer p {
+    color: var(--primaryDark);
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    font-size: clamp(13px, 1vw, 1rem);
+    line-height: 20px;
+    margin: 0;
+    padding: 1rem var(--mwEdgeSpacing);
+}
