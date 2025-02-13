@@ -25,7 +25,7 @@ _When it's time to mix it up!_
 - Make any changes you like to the topic list(s)
 
 
-### To Modify an Existing List of Topics
+### Modify the List of Topics
 
 _in `topics`, open the `.js` file corresponding to the list you'd like to update._
 
@@ -34,8 +34,12 @@ _in `topics`, open the `.js` file corresponding to the list you'd like to update
 - Delete any topic you like, or just _comment it out_ by adding `//` to the beginning of that line if you might use it later
 - Save and publish your changes
 
+## To Create a New List
 
-### To Save and Publish Changes
+_TODO_
+
+
+## Save and Publish Changes
 
 - Save your changes to the `.js` file
 - Commit your changes within GitHub
@@ -48,6 +52,6 @@ _in `topics`, open the `.js` file corresponding to the list you'd like to update
 
 ---
 
-Get help: [Reach out to Holls](itsgr82bfree@hotmail.com), Marilyn, or any of the Shipwrecked Passengers commitment-holders for assistance.
+Get help: [Reach out to Holls](mailto:itsgr82bfree@hotmail.com), Marilyn, or any of the Shipwrecked Passengers commitment-holders for assistance.
 _Contacts accurate as of 2/12/2025_
 </footer>
