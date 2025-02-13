@@ -38,6 +38,10 @@ _in `topics`, open the `.js` file corresponding to the list you'd like to update
 
 _TODO_
 
+- Other TODOs for Holls:
+  - How to change the default list
+  - How to change the colors/styles
+
 
 ## Save and Publish Changes
 
