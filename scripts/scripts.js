@@ -14,7 +14,7 @@ const chooseTopicBase = (newBase="originalSticks") => {
             topicBaseArr=enhancedSticks;
             break;
         default:
-            topicBaseArr=weeklyApplication;
+            topicBaseArr=originalSticks;
     }
 };
 
