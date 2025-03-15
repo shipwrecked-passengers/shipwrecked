@@ -5,7 +5,7 @@ import {weeklyApplication} from '../topics/weekly.js';
 
 
 let topicBaseArr = weeklyApplication;
-const chooseTopicBase = (newBase="weeklyApplication") => {
+const chooseTopicBase = (newBase="originalSticks") => {
     switch (newBase) {
         case "Original Sticks":
             topicBaseArr=originalSticks;
