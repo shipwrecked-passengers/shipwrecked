@@ -6,11 +6,12 @@ import {weeklyApplication} from '../topics/weekly.js';
 
 let topicBaseArr = originalSticks;
 const chooseTopicBase = (newBase="originalSticks") => {
+    debugger
     switch (newBase) {
-        case "Working the Program Sticks":
+        case "weeklyApplication":
             topicBaseArr=weeklyApplication;
             break;
-        case "Alternate Sticks":
+        case "enhancedSticks":
             topicBaseArr=enhancedSticks;
             break;
         default:
