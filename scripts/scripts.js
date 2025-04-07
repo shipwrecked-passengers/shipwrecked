@@ -1,73 +1,57 @@
-import {originalSticks} from '../topics/original.js';
-import {enhancedSticks} from '../topics/enhanced.js';
-import {weeklyApplication} from '../topics/weekly.js';
+import { topics } from '../topics/topics.js';
+import { questions } from '../topics/questions.js';
 
+let topicBaseArray = [...topics];
 
-
-let topicBaseArr = originalSticks;
-const chooseTopicBase = (newBase="originalSticks") => {
-    debugger
-    switch (newBase) {
-        case "weeklyApplication":
-            topicBaseArr=weeklyApplication;
-            break;
-        case "enhancedSticks":
-            topicBaseArr=enhancedSticks;
-            break;
-        default:
-            topicBaseArr=originalSticks;
-    }
+const chooseTopicBase = (id = 'topics') => {
+  topicBaseArray = id === 'questions' ? [...questions] : [...topics];
 };
 
 const toggleRadioPanel = () => {
-    const container = document.getElementById('radioWrap');
-    container.classList.toggle('expanded');
-}
-
-window.onload = function() {
-    const form = document.radioWrap;
-    const radioArr = form?.querySelectorAll('input[name="topicGroup"]');
-    let prev = null;
-
-    if (radioArr.length) {
-        for (var i = 0; i < radioArr.length; i++) {
-            radioArr[i].addEventListener('change', function() {
-                document.getElementById('message').innerText = "";
-                chooseTopicBase(this.value);
-            });
-        }
-    }
-
-    const newTopicButton = document.getElementById('pull');
-    newTopicButton.addEventListener('click', function(e) {
-        pullAPopsicleStick(topicBaseArr);
-    });
-
-    const radioToggle = document.getElementById('toggleRadios');
-    radioToggle.addEventListener('click', function(e) {
-        toggleRadioPanel();
-    })
+  const container = document.getElementById('radioWrap');
+  container?.classList.toggle('expanded');
 };
 
-function shuffle(array) {
+const shuffleArray = (array) => {
   return array.sort(() => Math.random() - 0.5);
 };
 
-function pullAPopsicleStick (popsicleSticks) {
-    const message = document.getElementById('message');
-    const allOut = document.getElementById('allOut');
-    const shuffle = document.getElementById('shuffle');
-    const pull = document.getElementById('pull');
-    const index = Math.floor(Math.random() * popsicleSticks.length);
-    const topic = popsicleSticks.splice(index, 1);
+const pullAPopsicleStick = (popsicleSticks) => {
+  const message = document.getElementById('message');
+  const pullButton = document.getElementById('pull');
 
-    if (topic.length === 0) {
-        pull.innerText = "Shuffle";
-        message.innerText = 'No more topics - shuffling!';
-        
-        setTimeout(function(){location = ''}, 500);
-    }
-    else {
-        message.innerText = topic;
-    }
-}
+  if (!popsicleSticks.length) {
+    pullButton.innerText = 'Shuffle';
+    message.innerText = 'No more topics - shuffling!';
+    setTimeout(() => {
+      location.reload();
+    }, 500);
+    return;
+  }
+
+  const index = Math.floor(Math.random() * popsicleSticks.length);
+  const [topic] = popsicleSticks.splice(index, 1);
+  message.innerText = topic;
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form[name="radioWrap"]');
+  const radioButtons = form?.querySelectorAll('input[name="topicGroup"]') || [];
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      document.getElementById('message').innerText = '';
+      chooseTopicBase(e.target.id);
+    });
+  });
+
+  // Initialize topicBaseArray based on initially checked radio
+  const checkedRadio = form?.querySelector('input[name="topicGroup"]:checked');
+  if (checkedRadio) chooseTopicBase(checkedRadio.id);
+
+  document.getElementById('pull')?.addEventListener('click', () => {
+    pullAPopsicleStick(topicBaseArray);
+  });
+
+  document.getElementById('toggleRadios')?.addEventListener('click', toggleRadioPanel);
+});
