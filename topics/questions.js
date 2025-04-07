@@ -1,4 +1,4 @@
-export const weeklyApplication = [
+export const questions = [
     // Start of questions that were already approved by the Shipwrecked Site Crew
     "Can the order in which the steps are worked be changed?",
     "How can you meet calamity with serenity?",
