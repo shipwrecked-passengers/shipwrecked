@@ -1,30 +1,32 @@
 export const weeklyApplication = [
     // Start of questions that were already approved by the Shipwrecked Site Crew
-    "What about my old friends?"
-    "What are your strategies between meetings?"
-    "What blocks acceptance?"
-    "What is being spiritually fit?"
-    "What is sobriety?"
-    "What is your favorite step (and why)?"
-    "What was your miracle?"
-    "When does pride get in your way?"
-    "When has the worst thing become the best?"
-    "When have we made a decision?"
-    "Which of the promises have come true for you?"
-    "Why do I keep coming back?"
-    "Why have a primary purpose?"
-    "Why is one drink so bad?"
-    "Why is willingness the key?"
-    "Why should we make amends?"
-    "How can you meet calamity with serenity?"
-    "How do you avoid projection and living in the wreckage of the future?"
-    "How do you get beyond “people pleasing” (trying to arrange the show)?"
-    "How do you handle big emotions?"
-    "How do you handle temptation?"
-    "How do you plan the action and stay out of the results?"
-    "How do you practice these principles in all your affairs?"
-    "How do you stay right-sized?"
-    "How have I been the creator of my own misery?"
+    "Can the order in which the steps are worked be changed?",
+    "How can you meet calamity with serenity?",
+    "How do you avoid projection and living in the wreckage of the future?",
+    "How do you get beyond people-pleasing and trying to arrange the show?",
+    "How do you get beyond “people pleasing” (trying to arrange the show)?",
+    "How do you handle big emotions?",
+    "How do you handle temptation?",
+    "How do you plan the action and stay out of the results?",
+    "How do you practice these principles in all your affairs?",
+    "How do you stay right-sized?",
+    "How have I been the creator of my own misery?",
+    "What about my old friends?",
+    "What are your strategies between meetings?",
+    "What blocks acceptance?",
+    "What is being spiritually fit?",
+    "What is sobriety?",
+    "What is your favorite step (and why)?",
+    "What was your miracle?",
+    "When does pride get in your way?",
+    "When has the worst thing become the best?",
+    "When have we made a decision?",
+    "Which of the promises have come true for you?",
+    "Why do I keep coming back?",
+    "Why have a primary purpose?",
+    "Why is one drink so bad?",
+    "Why is willingness the key?",
+    "Why should we make amends?",
     // End of already-approved questions
 
     "Share what you're looking forward to about a random step (or your favorite part of one you've already finished)",
