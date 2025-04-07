@@ -1,4 +1,4 @@
-export const originalSticks = [
+export const topics = [
     "Acceptance",
     "Action is key",
     "Alcoholic tornado",
