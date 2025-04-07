@@ -15,7 +15,7 @@ export const weeklyApplication = [
     "What are your strategies between meetings?",
     "What blocks acceptance?",
     "What is being spiritually fit?",
-    "What is sobriety?",
+    "What is sobriety to you?",
     "What is your favorite step (and why)?",
     "What was your miracle?",
     "When does pride get in your way?",
