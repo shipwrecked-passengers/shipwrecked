@@ -1,7 +1,7 @@
 import { topics } from '../topics/topics.js';
 import { questions } from '../topics/questions.js';
 
-let topicBaseArray = [...topics];
+let topicBaseArray = [...topics]; // Access the array inside the object
 
 const chooseTopicBase = (id = 'topics') => {
   topicBaseArray = id === 'questions' ? [...questions] : [...topics];
