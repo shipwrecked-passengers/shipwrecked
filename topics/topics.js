@@ -220,4 +220,9 @@ export const topics = [
     "Working with others",
     "Wreckage of past",
     "Your first 30 days",
+    "Having fun sober",
+    "To thine ownself be true",
+    "The first drink",
+    "The last drunk",
+    "The turning point"
 ];
