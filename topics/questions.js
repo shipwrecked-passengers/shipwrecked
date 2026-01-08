@@ -72,5 +72,12 @@ export const questions = [
     "Which one tripped you up the most: cunning, baffling, or powerful?",
     "Why do you keep coming back?",
     "On a daily basis, how do you deflate your ego?",
-    "Which promises have come true for you?"
+    "Which promises have come true for you?",
+    "What convinced you that you had a problem?",
+    "How have you changed?",
+    "What is it like to be 'restored to sanity'?",
+    "How did you choose your sponsor?",
+    "How did you choose your home group?",
+    "How does AA service help your sobriety?",
+    "What's the best thing about being sober?"
 ];
